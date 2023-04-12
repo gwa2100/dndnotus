@@ -1,3 +1,9 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
@@ -6,7 +12,8 @@ body {
     padding: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin-bottom: 0.5em;
 }
 
@@ -19,12 +26,19 @@ a:hover {
     text-decoration: underline;
 }
 
-form {
-    background-color: #232323;
+.form {
     padding: 1em;
     border-radius: 5px;
     max-width: 500px;
     margin: 1em auto;
+}
+
+.form--dark {
+    background-color: #232323;
+}
+
+.form--inline {
+    display: inline;
 }
 
 label {
@@ -32,7 +46,9 @@ label {
     margin-bottom: 0.5em;
 }
 
-input[type="text"], input[type="password"], textarea {
+input[type="text"],
+input[type="password"],
+textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 0.5em;
@@ -43,7 +59,7 @@ input[type="text"], input[type="password"], textarea {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+.input--submit {
     background-color: #45a29e;
     border: none;
     padding: 0.5em 1em;
@@ -53,7 +69,7 @@ input[type="submit"] {
     margin-bottom: 1em;
 }
 
-input[type="submit"]:hover {
+.input--submit:hover {
     background-color: #66fcf1;
     color: #1a1a1a;
 }
@@ -68,15 +84,16 @@ li {
 }
 
 .note-bubble {
-    background-color: #3c3c3c;
+    position: relative;
     border-radius: 5px;
     padding: 1em;
     margin-bottom: 1em;
-    position: relative;
+    background-color: #3c3c3c;
+    color: #e0e0e0;
 }
 
 .note-bubble::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 20px;
@@ -86,4 +103,3 @@ li {
     width: 0;
     height: 0;
 }
-
